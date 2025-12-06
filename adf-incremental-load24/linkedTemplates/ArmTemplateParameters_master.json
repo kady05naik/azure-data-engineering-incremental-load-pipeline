@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-incremental-load24"
+		},
+		"ls_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://technopracticestoacc.dfs.core.windows.net/"
+		},
+		"ls_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://techno-practice-secrets.vault.azure.net/"
+		},
+		"ls_AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "sqlservertechno.database.windows.net"
+		},
+		"ls_AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "mydb"
+		},
+		"ls_AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
