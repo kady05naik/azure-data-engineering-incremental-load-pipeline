@@ -1,0 +1,21 @@
+{
+	"name": "ds_json_min_date",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "minLoadDate.json",
+				"fileSystem": "inputcontainer"
+			}
+		},
+		"schema": {
+			"type": "object"
+		}
+	}
+}
