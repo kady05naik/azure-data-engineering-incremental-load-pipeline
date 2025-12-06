@@ -1,0 +1,24 @@
+{
+	"name": "ls_AzureSqlDatabase",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sqlservertechno.database.windows.net",
+			"database": "mydb",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sqladmin",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "mydb",
+				"secretVersion": "360aafdb17c54e53bfb4170aa877ac98"
+			}
+		}
+	}
+}
