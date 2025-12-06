@@ -1,0 +1,9 @@
+{
+	"name": "adf-incremental-load24",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c2d2ee10-03e1-4d8b-983d-2a2482713a15",
+		"tenantId": "06402196-43f7-404f-a957-a6b3dc7b72b1"
+	}
+}
