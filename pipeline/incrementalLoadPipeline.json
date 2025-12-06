@@ -87,7 +87,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from FactBookings where booking_date <= '@{activity('LookupMaxDate').output.firstRow.maxLoadDate}'  and booking_date >= '@{activity('LookupMinDate').output.firstRow.minLoadDate}'\n\n\n",
+							"value": "select * from FactBookings where booking_date <= '@{activity('LookupMaxDate').output.firstRow.maxLoadDate}'  and booking_date > '@{activity('LookupMinDate').output.firstRow.minLoadDate}'\n\n\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
