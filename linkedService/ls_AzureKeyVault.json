@@ -1,0 +1,10 @@
+{
+	"name": "ls_AzureKeyVault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://techno-practice-secrets.vault.azure.net/"
+		}
+	}
+}
