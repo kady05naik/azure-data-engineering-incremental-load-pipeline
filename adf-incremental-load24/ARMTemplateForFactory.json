@@ -170,7 +170,7 @@
 								"type": "DatasetReference",
 								"parameters": {
 									"p_date_file_name": {
-										"value": "@formatDateTime(activity('LookupMaxDate').output.firstRow.maxLoadDate)",
+										"value": "@formatDateTime(activity('LookupMaxDate').output.firstRow.maxLoadDate, 'yyyy-MM-dd')",
 										"type": "Expression"
 									}
 								}
@@ -432,6 +432,44 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/ls_AzureKeyVault')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ScheduleTriggerforpipeline')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "incrementalLoadPipeline",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Day",
+						"interval": 1,
+						"startTime": "2025-12-06T19:19:00",
+						"timeZone": "W. Europe Standard Time",
+						"schedule": {
+							"minutes": [
+								0
+							],
+							"hours": [
+								22
+							]
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/incrementalLoadPipeline')]"
 			]
 		}
 	]
